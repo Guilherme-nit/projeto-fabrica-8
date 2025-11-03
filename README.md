@@ -23,33 +23,19 @@ Este é um sistema web simples desenvolvido em Flask que permite visualizar list
 /projeto-vida-e-cuidado
 
 │
-
 ├─ app.py
-
 ├─ requirements.txt
-
 ├─ templates/
-
 │ ├─ base.html
-
 │ ├─ index.html
-
 │ ├─ listar_pacientes.html
-
 │ ├─ detalhe_paciente.html
-
 │ ├─ listar_medicos.html
-
 │ └─ detalhe_medico.html
-
 ├─ static/
-
 │ ├─ css/
-
 │ └─ images/
-
 └─ (opcional) dados/
-
 └─ … ou banco de dados SQLite
 
 
