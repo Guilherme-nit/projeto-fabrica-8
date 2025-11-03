@@ -3,6 +3,51 @@
 ## 📄 Descrição  
 Este é um sistema web simples desenvolvido em Flask que permite visualizar listas de pacientes e de médicos, além de consultar detalhes individuais de cada um. O objetivo é oferecer uma interface clara, funcional e agradável para a gestão básica de dados de saúde.
 
+
+## Utilizar o código ja feito em aula:
+
+```bash
+  from flask import Flask, render_template, abort, url_for
+
+app = Flask(__name__)
+
+alunos = [
+    {
+        "id": 1,
+        "nome":"Gabriel Moia",
+        "idade": 16,
+        "curso": "Python Intermediário",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/DavidGogginsMay08.jpg" 
+    },
+    {
+        "id": 2,
+        "nome":"Justin Bieber",
+        "idade": 23,
+        "curso": "Python Intermediário",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Justin_Bieber_20161111_009-2_%28cropped%29.jpg" 
+    }
+]
+
+@app.route("/")
+def home():
+    return render_template('index.html')
+
+@app.route("/alunos")
+def listar_alunos():
+    return render_template('listar_alunos.html', alunos=alunos)
+
+@app.route("/aluno/<int:aluno_id>")
+def detalhe_aluno(aluno_id):
+    for aluno in alunos:
+        if aluno['id'] == aluno_id:
+            return render_template('detalhe_aluno.html', aluno=aluno)
+    return "Aluno nao encontrado", 404
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+```
 ## ⭐ Funcionalidades principais  
 - Página inicial (rota `/`) com boas-vindas e explicação do sistema.  
 - Lista de **pacientes** (rota `/pacientes`) com nome, idade, condição médica, imagem em miniatura.  
