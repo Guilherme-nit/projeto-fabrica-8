@@ -79,6 +79,11 @@ if __name__ == '__main__':
 │   ├─ css/  
 │   └─ images/  
 
+## Crítico
+- Realização do arquivo app.py
+
+## Desejável
+- Realização das paginas (templates) html
 
 
 ## ⚙️ Instalação e execução  
