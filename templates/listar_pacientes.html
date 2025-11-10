@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h2>Lista de Pacientes</h2>
+
+
+<div class="grid">
+    {% for paciente in pacientes %}
+    <div class="card">
+        <img src="{{ paciente.image }}" alt="Foto de {{ paciente.nome }}">
+        <h3>{{ paciente.nome }}</h3>
+        <p>Idade: {{ paciente.idade }}</p>
+        <p>Condição: {{ paciente.condicao }}</p>
+        <a href="{{ url_for('detalhe_paciente', paciente_id=paciente.id) }}">Ver detalhes</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

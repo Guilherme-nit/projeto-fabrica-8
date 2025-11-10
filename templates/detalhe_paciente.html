@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detalhes do Médico</h2>
+
+<div class="detalhe">
+    <img src="{{ medico.image }}" alt="Foto de {{ medico.nome }}">
+    <h3>{{ medico.nome }}</h3>
+    <p><strong>Especialidade:</strong> {{ medico.especialidade }}</p>
+    <p><strong>Anos de experiência:</strong> {{ medico.anos_experiencia }}</p>
+    <p><strong>Contato:</strong> {{ medico.email }}</p>
+</div>
+
+<a href="{{ url_for('listar_medicos') }}">← Voltar à lista</a>
+{% endblock %}

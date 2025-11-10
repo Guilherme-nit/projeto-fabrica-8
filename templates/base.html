@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Vida & Cuidado 🏥</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Vida & Cuidado – Sistema de Gestão Médica</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">🏠 Início</a>
+            <a href="{{ url_for('listar_pacientes') }}">🧑‍⚕️ Pacientes</a>
+            <a href="{{ url_for('listar_medicos') }}">👨‍⚕️ Médicos</a>
+        </nav>
+    </header>
+
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+
+    <footer>
+        <p>© 2025 Vida & Cuidado – Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
